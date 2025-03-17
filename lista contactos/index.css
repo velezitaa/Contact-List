@@ -1,0 +1,268 @@
+body {
+    background-color: var(--bg-color);
+    height: 95vh;
+    display: flex; 
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#main-title {
+    text-align: center;
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin: 1rem;
+}
+
+/* Controla ambos recuadros */
+#main {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Formulario Contenedor */
+#form {
+    background-color: var(--primary-color);
+    display: flex;
+    flex-direction: column;
+    padding: 0.5rem;
+    margin-bottom: 1rem;
+    border-radius: 1rem;
+    /* gap: 1rem; */
+}
+
+/* Contenedor del input */ 
+/* Controla el del nombre y el del numero */
+.form-input-container {
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    gap: 0.5rem;
+    margin: 1rem;
+}
+
+/* Texto "Nombre" y "Numero" */
+label {
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+/* Barra para escribir */
+#input-form {
+    background-color: white;
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+}
+
+#input-form:focus {
+    outline-color: transparent;
+}
+
+/* Texto de error */
+.form-helper-text {
+    font-size: 0.9rem;
+    color: var(--helper-text-color);
+}
+
+/* Texto de error Ejemplo */
+.form-helper-text-ej {
+    font-size: 0.9rem;
+    color: var(--helper-text-ej-color);
+}
+
+/* Boton Añadir */
+#main-form-button {
+    background-color: var(--form-btn-color);
+    padding: 5px;
+    border-radius: 1rem;
+    margin: 0 5rem;
+    cursor: pointer;
+    transition: all 0.175s ease-in-out;
+}
+
+/* Boton Añadir Icono */
+#main-form-button-icon {
+    color: white;
+    height: 1.5rem;
+    width: 1.5rem;
+}
+
+#main-form-button:hover {
+    background-color: var(--form-btn-hover-color);
+}
+
+/* Boton Añadir Texto */
+#main-form-button-text {
+    color: white;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Contenedor Lista */
+#contact-list {
+    background-color: var(--bg-list-color);
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    height: 14vh;
+    overflow: auto;
+    border-radius: 1rem;
+    list-style: none;
+    gap: 1rem;
+}
+
+/* Contenedor Contacto */
+.contact-item {
+    background-color: var(--primary-color);
+    padding: 0.5rem;
+    border-radius: 0.5rem;
+    gap: 2.5rem;
+    display: flex;
+    align-items: center;
+}
+
+/* Input del Contacto agregado */
+#contact-text {
+    color: var(--text-color);
+    text-align: justify;
+    word-wrap: break-word;
+
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 10rem;
+}
+
+#contact-text:focus {
+    outline-color: var(--text-color);
+}
+
+#contact-text::placeholder {
+    color: var(--text-color);
+    font-size: 1rem;
+
+}
+
+/* Input del Numero agregado */
+#contact-number {
+    color: var(--text-color);
+    text-align: justify;
+    word-wrap: break-word;
+
+    background-color: var(--primary-color);
+    border-radius: 0.5rem;
+    text-align: center;
+    width: 8rem;
+}
+
+#contact-number:focus {
+    outline-color: var(--text-color);
+}
+
+#contact-number::placeholder{
+    color: var(--text-color);
+    font-size: 1rem;
+
+}
+
+/* Boton Editar */
+.task-item-edit-button {
+    background-color: var(--edit-btn-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.175s ease-in-out;
+}
+
+/* Boton Editar Icono */
+.task-item-edit-button-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.task-item-edit-button:hover {
+    background-color: var(--edit-btn-hover-color);
+}
+
+/* Boton Borrar */
+.task-item-delete-button {
+    background-color: var(--delete-btn-color);
+    border-radius: 0.5rem;
+    padding: 0.5rem;
+    cursor: pointer;
+    transition: all 0.175s ease-in-out;
+}
+
+/* Boton Borrar Icono */
+.task-item-delete-button-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.task-item-delete-button:hover {
+    background-color: var(--delete-btn-hover-color);
+}
+
+@media (max-width: 768px) {
+    #main {
+        width: 97%;
+    }
+
+    #main-title {
+        font-size: 2rem;
+        margin: 1rem;
+    }
+
+    label {
+        font-size: 15px;
+    }
+
+    #input {
+        padding: 0.3rem;
+    }
+
+    .form-helper-text {
+        font-size: 0.7rem;
+    }
+
+    .form-helper-text-ej {
+        font-size: 0.7rem;
+    }
+
+    #main-form-button-icon {
+        height: 1.3rem;
+        width: 1.3rem;
+    }
+
+    .contact-item {
+        gap: 0.3rem;
+    }
+
+    .contact-text {
+        font-size: 15px;
+    }
+
+    .contact-number {
+        font-size: 15px;
+    }
+
+    .task-item-edit-button-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .task-item-delete-button-icon {
+        width: 1rem;
+        height: 1rem;
+    }
+
+    .input-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    }
+}
